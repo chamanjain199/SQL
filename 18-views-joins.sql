@@ -1,0 +1,1 @@
+SELECT u.first_name from users u inner join addresses a on u.address_id=a.id where a.street='Pizzastreet';

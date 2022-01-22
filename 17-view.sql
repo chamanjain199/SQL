@@ -1,0 +1,1 @@
+CREATE VIEW Tokyo_Users AS SELECT u.first_name from users as u inner join addresses as a on u.address_id=a.id inner join cities as c on a.city_id=c.id where c.name='Tokyo';
