@@ -1,0 +1,2 @@
+ALTER TABLE table2
+ADD UNIQUE (value1);
