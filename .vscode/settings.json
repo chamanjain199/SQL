@@ -20,7 +20,7 @@
             "askForPassword": true,
             "driver": "PostgreSQL",
             "name": "postgres1",
-            "database": "relational_db",
+            "database": "restaurants",
             "username": "postgres"
         }
     ]
