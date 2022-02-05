@@ -20,16 +20,19 @@
 --      select product_name, price ,group_name , RANK () OVER(PARTITION BY group_name ORDER BY price desc) as rn from products as p INNER JOIN product_groups pg ON p.group_id=pg.group_id
 -- ) as subq where rn=4 ;
 
-
-
 --    select product_name, price ,group_name , DENSE_RANK () OVER(PARTITION BY group_name ORDER BY price desc) as rn from products as p INNER JOIN product_groups pg ON p.group_id=pg.group_id;
 -- select product_name, price ,group_name,rn  from ( 
 --      select product_name, price ,group_name , DENSE_RANK () OVER(PARTITION BY group_name ORDER BY price desc) as rn from products as p INNER JOIN product_groups pg ON p.group_id=pg.group_id
 -- ) as subq where rn=4 ;
 
-
 -- select product_name, price ,group_name  from ( 
 --      select product_name, price ,group_name , NTH_VALUE (price,2) OVER(PARTITION BY group_name ORDER BY price desc) as rn from products as p INNER JOIN product_groups pg ON p.group_id=pg.group_id
 -- ) as subq where rn=2 ;
 
-select product_name, price ,group_name , NTH_VALUE (price,2) OVER(PARTITION BY group_name ORDER BY price desc) as rn from products as p INNER JOIN product_groups pg ON p.group_id=pg.group_id
+-- select product_name, price ,group_name , NTH_VALUE (price,2) OVER(PARTITION BY group_name ORDER BY price desc) as rn from products as p INNER JOIN product_groups pg ON p.group_id=pg.group_id
+
+-- SELECT product_name, price, group_name, CUME_DIST() OVER(PARTITION BY group_name ORDER BY price) FROM products p 
+-- INNER JOIN product_groups pg ON p.group_id=pg.group_id order by group_name;
+
+-- SELECT product_name, price, group_name, FIRST_VALUE(price) OVER(PARTITION BY group_name ORDER BY price desc) FROM products p 
+-- INNER JOIN product_groups pg ON p.group_id=pg.group_id order by group_name;
