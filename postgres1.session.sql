@@ -25,7 +25,8 @@ VALUES (8,	10,	11,	FALSE,	1),
 VALUES (9,	12,	11,	FALSE,	1);
 
 INSERT INTO public."FriendsData"
-      VALUES (2,	11,	5,	FALSE,	1),
+      VALUES (1,	10,	11,	FALSE,	1),
+       (2,	11,	5,	FALSE,	1),
        (3,	10,	11,	FALSE,	1),
        (4,	5,	25,	FALSE,	1),
       (5,	10,	11,	FALSE,	1),
